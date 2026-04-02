@@ -31,4 +31,7 @@ app.use('/api/delivery', deliveryRoutes);
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
+    console.log(`DB_HOST: ${process.env.DB_HOST || 'NOT SET (using localhost)'}`);
+    console.log(`DB_NAME: ${process.env.DB_NAME || 'NOT SET (using foodie_db)'}`);
+    console.log(`DB_PORT: ${process.env.DB_PORT || 'NOT SET (using 3306)'}`);
 });
